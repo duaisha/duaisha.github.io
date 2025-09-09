@@ -14,17 +14,31 @@
       color: #222;
       line-height: 1.6;
     }
+
+    /* === HEADER WITH AI BACKGROUND === */
     header {
       text-align: center;
-      padding: 2rem 1rem;
-      background: #003366;
+      padding: 4rem 1rem;
       color: #fff;
+      background: url("https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 50, 0.6); /* dark overlay for readability */
+    }
+    header h1, header p, header nav, header img {
+      position: relative;
+      z-index: 2;
     }
     header img {
       width: 160px;
       border-radius: 50%;
       margin-top: 1rem;
       border: 3px solid #fff;
+      box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
     }
     nav {
       margin: 1rem 0;
@@ -35,8 +49,9 @@
       color: #ffd24c;
       font-weight: bold;
     }
+
     main {
-      max-width: 900px;
+      max-width: 950px;
       margin: auto;
       padding: 2rem 1rem;
     }
@@ -106,9 +121,9 @@
       <ul class="news-list">
         <li><mark>Aug 2023</mark> – Presented <i>“Synthetic Data for Intelligent Interiors”</i> at Mercedes-Benz AI Day.</li>
         <li><mark>Dec 2023</mark> – Received Technical Publication Award for NeurIPS 2023 workshop paper.</li>
-        <li><mark>Oct 2022</mark> – Our ECCV 2022 Workshop paper on semi-supervised domain adaptation was published.</li>
-        <li><mark>2022</mark> – Awarded Patent Award & Process Innovation Award by Mercedes-Benz R&D.</li>
-        <li><mark>2019</mark> – Oral paper on AutoRate presented at FG 2019, and journal paper accepted at IEEE TBIOM.</li>
+        <li><mark>Oct 2022</mark> – ECCV 2022 Workshop paper on semi-supervised domain adaptation accepted.</li>
+        <li><mark>2022</mark> – Patent Award & Process Innovation Award by Mercedes-Benz R&D.</li>
+        <li><mark>2019</mark> – Oral paper on AutoRate at FG 2019; IEEE TBIOM journal paper published.</li>
       </ul>
     </section>
 
